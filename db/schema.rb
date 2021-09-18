@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2021_09_18_141824) do
   create_table "game_logs", force: :cascade do |t|
     t.integer "user_id_1", null: false
     t.integer "user_id_2", null: false
+    t.integer "win_user", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
