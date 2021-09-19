@@ -1,6 +1,6 @@
 class GameLogsController < ApplicationController
   def index
-    game_logs = GameLog.limit(10)
+    game_logs = GameLog.order(:created_at, :desc).limit(10)
     res = []
     # TODO: N+1が起こっているが件数が少ない、時間がないので無視
     game_logs.each do |game_log|
