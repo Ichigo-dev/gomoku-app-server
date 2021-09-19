@@ -6,7 +6,7 @@ class GameLogsController < ApplicationController
     game_logs.each do |game_log|
       user_1 = User.find(game_log.user_id_1)
       user_2 = game_log.user_id_2 == -1 ? nil : User.find(game_log.user_id_2)
-      res << {id: game_log.id, win_user: game_log.win_user, user_1_name: user_1.name, user_2_name: user_2 ? user_2.name : "CPU"}
+      res << {id: game_log.id, win_user: game_log.win_user, created_at: game_log.created_at, user_1_name: user_1.name, user_2_name: user_2 ? user_2.name : "CPU"}
     end
     render json: res
   end
