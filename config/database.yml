@@ -15,8 +15,8 @@ development:
     # Do not set this db to the same as development or production.
 test:
   <<: *default
-database: gomoku_server_api_test
+  database: gomoku_server_api_test
 
 production:
   <<: *default
-database: gomoku_server_api_production
+  database: gomoku_server_api_production
